@@ -157,22 +157,3 @@ Generate a 3-day coaching plan.
 ## 📝 License
 
 This project is open source and available under the [MIT License](LICENSE).
-
-## 👤 Author
-
-**Ethan** ([@xyydcoldcold](https://github.com/xyydcoldcold))
-
-- Computer Science @ University of Toronto
-- Full-stack & AI application developer
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
-
-## ⭐️ Show your support
-
-Give a ⭐️ if this project helped you!
-
----
-
-*Built with ❤️ using React Native, Node.js, and OpenAI*
