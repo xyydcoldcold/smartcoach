@@ -1,52 +1,41 @@
-📱 SmartCoach — AI-Powered Personal Coaching App
+# 📱 SmartCoach — AI-Powered Personal Coaching App
 
-SmartCoach is a full-stack AI personal development assistant built with:
+SmartCoach is a full-stack AI personal development assistant that helps users achieve their goals through actionable 3-day plans.
 
-React Native (Expo) — mobile app
+## 🎯 Overview
 
-Node.js + Express — backend API
+SmartCoach generates personalized 3-day action plans for any goal using AI. Built with React Native for mobile, Node.js for the backend, and powered by OpenAI's GPT-4o-mini, it runs directly on physical iPhones using Expo Go.
 
-OpenAI GPT-4o-mini — AI engine
+## ✨ Features
 
-It generates personalized 3-day action plans for any goal the user enters.
-The app runs directly on a physical iPhone using Expo Go.
+### Mobile App (React Native + Expo)
+- Clean and intuitive UI
+- Input field for personal goals
+- "Generate 3-Day Plan" button
+- Real-time AI responses displayed on-device
 
-🚀 Features
-Mobile App (React Native + Expo)
+### Backend (Node.js + Express)
+- REST API endpoint: `POST /coach`
+- Secure `.env` API key handling
+- JSON body parsing
+- CORS enabled for mobile device access
 
-Clean and intuitive UI
+### AI Integration
+- Uses OpenAI `gpt-4o-mini`
+- Produces actionable, structured 3-day plans
+- Prompt designed for clarity and usefulness
 
-Input field for personal goals
+## 📸 Screenshot
 
-“Generate 3-Day Plan” button
+*Replace with your own screenshot from Expo Go*
 
-Real-time AI responses displayed on-device
-
-Backend (Node.js + Express)
-
-REST API endpoint: POST /coach
-
-Secure .env API key handling
-
-JSON body parsing
-
-CORS enabled for mobile device access
-
-AI Integration
-
-Uses OpenAI gpt-4o-mini
-
-Produces actionable, structured 3-day plans
-
-Prompt designed for clarity and usefulness
-
-📸 Screenshot (Example)
-
-Replace this with your own screenshot from Expo Go.
-
+```
 [ Insert screenshot here ]
+```
 
-🗂 Project Structure
+## 🗂 Project Structure
+
+```
 smartcoach/
 │
 ├── smartcoach-app/          # React Native frontend
@@ -63,106 +52,127 @@ smartcoach/
 │   └── ...
 │
 └── .gitignore               # ignores node_modules and .env
+```
 
-📲 Running the Mobile App (Frontend)
-1. Install dependencies
-cd smartcoach/smartcoach-app
-npm install
+## 🚀 Getting Started
 
-2. Start Expo
-npx expo start
+### Prerequisites
 
-3. Run on iPhone
+- Node.js (v14 or higher)
+- npm or yarn
+- Expo Go app installed on your iPhone
+- OpenAI API key
 
-Install Expo Go from the App Store
+### 📲 Running the Mobile App (Frontend)
 
-Scan the QR code printed in the terminal
+1. **Install dependencies**
+   ```bash
+   cd smartcoach/smartcoach-app
+   npm install
+   ```
 
-🛠 Running the Backend (Express Server)
-1. Install dependencies
-cd smartcoach/smartcoach-api
-npm install
+2. **Start Expo**
+   ```bash
+   npx expo start
+   ```
 
-2. Add your OpenAI API key
+3. **Run on iPhone**
+   - Install Expo Go from the App Store
+   - Scan the QR code printed in the terminal
 
-Create .env:
+### 🛠 Running the Backend (Express Server)
 
-OPENAI_API_KEY=sk-proj-xxxxxx
+1. **Install dependencies**
+   ```bash
+   cd smartcoach/smartcoach-api
+   npm install
+   ```
 
-3. Start the server
-node server.js
+2. **Add your OpenAI API key**
+   
+   Create a `.env` file in the `smartcoach-api` directory:
+   ```env
+   OPENAI_API_KEY=sk-proj-xxxxxx
+   ```
 
+3. **Start the server**
+   ```bash
+   node server.js
+   ```
 
-Server runs at:
+   Server runs at: `http://localhost:8080`
 
-http://localhost:8080
+## 🌐 API Documentation
 
-🌐 API Endpoint
-POST /coach
+### POST /coach
 
 Generate a 3-day coaching plan.
 
-Request Example
+**Request Body:**
+```json
 {
   "goal": "I want to improve my study habits"
 }
+```
 
-Response Example
+**Response:**
+```json
 {
   "plan": "Day 1: ...\nDay 2: ...\nDay 3: ..."
 }
+```
 
-🧠 How It Works
+## 🧠 How It Works
 
-User enters a personal goal
+1. User enters a personal goal in the mobile app
+2. React Native app sends the goal to `/coach` endpoint
+3. Express backend forwards the request to OpenAI API
+4. OpenAI returns a structured 3-day plan
+5. The mobile app displays the plan in real time
 
-React Native app sends it to /coach
+## ⚙️ Tech Stack
 
-Express backend forwards it to OpenAI
+### Frontend
+- React Native
+- Expo
+- JavaScript
+- Fetch API
 
-OpenAI returns a structured plan
+### Backend
+- Node.js
+- Express
+- CORS
+- dotenv
+- OpenAI API
 
-The mobile app displays it in real time
+## 🚧 Future Enhancements
 
-⚙️ Tech Stack
-Frontend
+- [ ] Chat-based coaching mode
+- [ ] User accounts / authentication
+- [ ] Progress tracking
+- [ ] MongoDB integration
+- [ ] Voice input + speech output
+- [ ] Coaching categories (fitness, study, career, etc.)
 
-React Native
+## 📝 License
 
-Expo
+This project is open source and available under the [MIT License](LICENSE).
 
-JavaScript / TypeScript
+## 👤 Author
 
-Fetch API
+**Ethan** ([@xyydcoldcold](https://github.com/xyydcoldcold))
 
-Backend
+- Computer Science @ University of Toronto
+- Full-stack & AI application developer
 
-Node.js
+## 🤝 Contributing
 
-Express
+Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
 
-CORS
+## ⭐️ Show your support
 
-dotenv
+Give a ⭐️ if this project helped you!
 
-OpenAI API
+---
 
-🚧 Future Enhancements
-
-Chat-based coaching mode
-
-User accounts / authentication
-
-Progress tracking
-
-MongoDB integration
-
-Voice input + speech output
-
-Coaching categories (fitness, study, career, etc.)
-
-👤 Author
-
-Ethan (xyydcoldcold)
-Computer Science @ University of Toronto
-Full-stack & AI application developer
+*Built with ❤️ using React Native, Node.js, and OpenAI*
